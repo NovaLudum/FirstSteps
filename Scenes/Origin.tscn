@@ -1,3 +1,13 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Models/character_placeholder.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Models/character_placeholder.gd" type="Script" id=2]
 
 [node name="Origin" type="Node"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.929754, 0, 0.368181, 0, 1, 0, -0.368181, 0, 0.929754, -2.10339, 2.89083, 5.71508 )
+
+[node name="character_placeholder" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.64489, -0.347011, -0.0474048 )
+script = ExtResource( 2 )
