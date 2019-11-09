@@ -9,5 +9,5 @@
 transform = Transform( 0.929754, 0, 0.368181, 0, 1, 0, -0.368181, 0, 0.929754, -2.10339, 2.89083, 5.71508 )
 
 [node name="character_placeholder" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.64489, -0.347011, -0.0474048 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.63479, 0.87248, 0.800929 )
 script = ExtResource( 2 )
