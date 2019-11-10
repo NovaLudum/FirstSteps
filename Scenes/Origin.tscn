@@ -22,7 +22,7 @@ transform = Transform( 0.746055, 0.492498, -0.448161, -0.277332, 0.841695, 0.463
 current = true
 
 [node name="character_placeholder" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.64489, -0.347011, -0.0474048 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.63479, 0.87248, 0.800929 )
 script = ExtResource( 2 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
