@@ -22,7 +22,7 @@ transform = Transform( 0.746055, 0.492498, -0.448161, -0.277332, 0.841695, 0.463
 current = true
 
 [node name="character_placeholder" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.63479, 0.87248, 0.800929 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.64489, -0.347011, -0.0474048 )
 script = ExtResource( 2 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
@@ -34,6 +34,6 @@ mesh = SubResource( 1 )
 material/0 = ExtResource( 4 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="."]
-transform = Transform( 8.04722, 0, 0, 0, 1, 0, 0, 0, 7.95244, -0.44821, 1.5843, 3.84437 )
+transform = Transform( 1.25057, 0, 0, 0, 1, 0, 0, 0, 1.36935, -1.12466, 1.5843, 3.84437 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 3 )
