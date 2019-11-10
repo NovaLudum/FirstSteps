@@ -34,6 +34,6 @@ mesh = SubResource( 1 )
 material/0 = ExtResource( 4 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44821, 1.5843, 3.84437 )
+transform = Transform( 8.04722, 0, 0, 0, 1, 0, 0, 0, 7.95244, -0.44821, 1.5843, 3.84437 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 3 )
