@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Models/character_placeholder.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Models/character_placeholder.gd" type="Script" id=2]
@@ -15,15 +15,20 @@ subdivide_depth = 8
 subdivide_width = 20
 subdivide_depth = 26
 
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="BoxShape" id=4]
+
 [node name="Origin" type="Node"]
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.746055, 0.492498, -0.448161, -0.277332, 0.841695, 0.46329, 0.605384, -0.221351, 0.764535, -2.10868, 2.90261, 5.7248 )
-current = true
-
 [node name="character_placeholder" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.64489, -0.347011, -0.0474048 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.59643, 6.84509, -0.0474048 )
 script = ExtResource( 2 )
+
+[node name="Camera" type="Camera" parent="character_placeholder"]
+transform = Transform( 0.746055, 0.492498, -0.448161, -0.277332, 0.841695, 0.46329, 0.605384, -0.22135, 0.764536, -5.24707, 5.29178, 8.68677 )
+current = true
+fov = 68.67
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.12641, 56.5408 )
@@ -37,3 +42,14 @@ material/0 = ExtResource( 4 )
 transform = Transform( 1.25057, 0, 0, 0, 1, 0, 0, 0, 1.36935, -1.12466, 1.5843, 3.84437 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 3 )
+
+[node name="squareCharacter" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3.89655, 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="squareCharacter"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.7915, 0, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="squareCharacter"]
+shape = SubResource( 4 )
