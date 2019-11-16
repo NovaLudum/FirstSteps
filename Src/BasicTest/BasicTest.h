@@ -22,6 +22,7 @@ public:
     void _init();
 
     void _process(float delta);
+    void _ready();
 };
 }
 #endif
