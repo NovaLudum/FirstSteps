@@ -3,14 +3,12 @@
 singleton=false
 load_once=true
 symbol_prefix="godot_"
-reloadable=false
+reloadable=true
 
 [entry]
 
-Windows.64="res://Bin/win64/libBasicTest.dll"
 X11.64="res://Bin/x11/libBasicTest.so"
 
 [dependencies]
 
-Windows.64=[  ]
-X11.64=[  ]
+X11.64=[ "res://Bin/x11/libCommon.so" ]

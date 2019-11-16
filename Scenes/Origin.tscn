@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Bin/BasicTest.gdns" type="Script" id=1]
+[ext_resource path="res://Src/BasicTest/BasicTest.gdns" type="Script" id=1]
 [ext_resource path="res://Assets/Models/character_placeholder.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Materials/rock_wall.material" type="Material" id=3]
 [ext_resource path="res://Assets/Shaders/displacement_shadermaterial.tres.material" type="Material" id=4]
@@ -20,13 +20,14 @@ subdivide_depth = 26
 [sub_resource type="BoxShape" id=4]
 
 [node name="Origin" type="Node"]
+editor/display_folded = true
 script = ExtResource( 1 )
 
 [node name="character_placeholder" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.59643, 6.84509, -0.0474048 )
 
 [node name="Camera" type="Camera" parent="character_placeholder"]
-transform = Transform( 0.746055, 0.492498, -0.448161, -0.277332, 0.841695, 0.46329, 0.605384, -0.22135, 0.764536, -5.24707, 5.29178, 8.68677 )
+transform = Transform( 0.746055, 0.492498, -0.448161, -0.277332, 0.841695, 0.463289, 0.605384, -0.22135, 0.764536, -6.23418, 7.52043, 7.33852 )
 current = true
 fov = 68.67
 
@@ -44,6 +45,7 @@ mesh = SubResource( 2 )
 material/0 = ExtResource( 3 )
 
 [node name="squareCharacter" type="KinematicBody" parent="."]
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3.89655, 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="squareCharacter"]
