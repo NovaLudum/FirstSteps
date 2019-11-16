@@ -11,7 +11,7 @@ class BasicTest : public Node {
     GODOT_CLASS(BasicTest, Node);
 
 private:
-    godot_string label;
+    String label;
 
 public:
     static void _register_methods();

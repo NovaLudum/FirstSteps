@@ -3,7 +3,5 @@
 [ext_resource path="res://Bin/BasicTest.gdnlib" type="GDNativeLibrary" id=1]
 
 [resource]
-resource_name = "BasicTest"
 class_name = "BasicTest"
 library = ExtResource( 1 )
-_sections_unfolded = [ "Resource" ]
