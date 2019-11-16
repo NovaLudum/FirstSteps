@@ -20,7 +20,7 @@ void BasicTest::_init()
 void BasicTest::_ready()
 {
     Godot::print(label);
-    Popup *popupDialog = (Popup *)Node::get_node("PopupDialog");
+    Popup *popupDialog = static_cast<Popup*>(Node::get_node("PopupDialog"));
     popupDialog->popup();
 }
 

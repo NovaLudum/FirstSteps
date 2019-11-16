@@ -18,6 +18,7 @@ opts.Add(PathVariable('source_path', 'Where the sources are stored', ''))
 # Local dependency paths, adapt them to your setup
 godot_headers_path = "../godot-cpp/godot_headers/"
 cpp_bindings_path = "../godot-cpp/"
+cpp_basic_sources = "../Src/"
 cpp_library = "libgodot-cpp"
 
 # only support 64 at this time..
@@ -99,8 +100,9 @@ env.Append(LIBS=[cpp_library])
 # tweak this if you want to use different folders, or more folders, to store your source code in.
 cpp_source = env['source_path']
 
-env.Append(CPPPATH=[cpp_source])
+env.Append(CPPPATH=[cpp_source, cpp_basic_sources])
 sources = Glob(cpp_source + '/*.cpp')
+sources.extend(Glob(cpp_basic_sources + '/*.cpp'))
 
 library = env.SharedLibrary(target=env['target_path'] + env['target_name'] , source=sources)
 
