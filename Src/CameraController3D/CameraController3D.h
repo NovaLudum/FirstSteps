@@ -3,6 +3,7 @@
 
 #include <Camera.hpp>
 #include <Godot.hpp>
+#include <Input.hpp>
 #include <InputEvent.hpp>
 #include <InputEventMouseMotion.hpp>
 #include <Node.hpp>
@@ -24,6 +25,8 @@ private:
     Vector2 motion = Vector2();
 
     float cameraXRotation = 0.0;
+
+    bool cursorActive = false;
 
     //export
     Camera *camera;
@@ -49,7 +52,7 @@ public:
     void _init();
     void _ready();
 
-    void _process(float delta);
+    void _physics_process(float delta);
     void _input(const godot::Ref<godot::InputEvent> event);
 
     void setCamera(NodePath nodePath);
