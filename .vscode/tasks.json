@@ -1,0 +1,22 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "[Linux] Build C++ Shared Objects",
+            "type": "shell",
+            "command": "./Build/build_linux_c++_so_debug_x64.sh",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "[Linux] Build C++ Engine Bindings",
+            "type": "shell",
+            "command": "./Build/build_linux_c++_engine_bindings_debug_x64.sh",
+        }
+    ]
+}
